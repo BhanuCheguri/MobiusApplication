@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.poc.mobiusapplication.BonusCouponModel" />
+    </data>
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardElevation="5dp"
+    android:layout_margin="5dp"
+    card_view:cardCornerRadius="5dp"
+    card_view:cardBackgroundColor="#f4c3b2">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp">
+            <TextView
+                android:id="@+id/code"
+                style="@style/TextViewHeaderBold"
+                android:layout_weight="1"
+                android:text="THIRD777"
+                android:layout_margin="2dp"
+                android:background="@drawable/dotted_bg"/>
+            <TextView
+                style="@style/TextViewHeaderNormal"
+                android:layout_weight="1"
+                android:text="RIBBON"
+                android:layout_margin="2dp"
+                android:textColor="@android:color/white"
+                android:background="#60c716"
+                android:gravity="right"
+                android:id="@+id/ribbonMsg"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/black"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="0.4">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/ll_Percentage">
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/ic_discount_percentage"/>
+                <TextView
+                    android:id="@+id/slabPercentage"
+                    style="@style/TextViewHeaderBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Get 100%"/>
+
+                <TextView
+                    android:id="@+id/slabMax"
+                    style="@style/TextViewHeaderBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Upto 20000"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll_Valid">
+                <TextView
+                    android:id="@+id/validUntil"
+                    style="@style/TextViewNormalBold"
+                    android:text="Valid till 1st JAN,2099"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/hideDetails"
+                style="@style/TextViewHeaderBold"
+                android:text="Hide Details"
+                android:drawablePadding="15dp"
+                android:textColor="@android:color/holo_orange_dark"
+                android:drawableRight="@drawable/up_arrow"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6"
+            android:orientation="vertical"
+            android:id="@+id/ll_MinDeposit">
+            <TextView
+                style="@style/TextViewHeaderBold"
+                android:text="Min Deposit"
+                android:gravity="right"
+                android:layout_gravity="right"/>
+            <TextView
+                android:id="@+id/slabMin"
+                style="@style/TextViewHeaderBold"
+                android:text="500"
+                android:textColor="@android:color/holo_green_dark"
+                android:gravity="right"
+                android:layout_gravity="right"/>
+
+            <TextView
+                style="@style/TextViewHeaderBold"
+                android:text="Applied"
+                android:gravity="right"
+                android:layout_gravity="right"
+                android:textColor="@android:color/holo_green_dark"/>
+        </LinearLayout>
+    </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/black"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:columnCount="3"
+            android:rowCount="1">
+
+            <TextView
+                android:layout_row="0"
+                android:layout_rowSpan="1"
+                android:layout_column="0"
+                android:layout_columnSpan="1"
+                android:layout_gravity="fill_horizontal"
+                android:gravity="left|center_horizontal"
+                android:text="Purchase Amount"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="match_parent"
+                android:textColor="#000000"
+                android:textSize="16dp"/>
+
+            <TextView
+                android:layout_row="0"
+                android:layout_rowSpan="1"
+                android:layout_column="1"
+                android:layout_columnSpan="1"
+                android:layout_gravity="fill_horizontal"
+                android:gravity="center_horizontal"
+                android:layout_columnWeight="1"
+                android:layout_width="0dp"
+                android:text="Bonus Amount"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:layout_row="0"
+                android:layout_rowSpan="1"
+                android:layout_column="2"
+                android:layout_columnSpan="1"
+                android:layout_gravity="fill_horizontal"
+                android:gravity="right|center_horizontal"
+                android:layout_columnWeight="1"
+                android:layout_width="0dp"
+                android:text="Instant Cash"
+                android:textColor="#000000"
+                android:textSize="16sp"/>
+        </GridLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/black"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
+
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingTop="10dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="10dp"
+            android:columnCount="3"
+            android:rowCount="3"
+            android:id="@+id/ll_slabs">
+
+           <!-- <TextView
+                android:layout_row="0"
+                android:layout_rowSpan="1"
+                android:layout_column="0"
+                android:layout_columnSpan="1"
+                android:layout_gravity="fill_horizontal"
+                android:gravity="bottom|center_horizontal"
+                android:text="1500"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:textColor="#000000"
+                android:textSize="15dp"
+                android:padding="5dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_row="1"
+                android:layout_rowSpan="1"
+                android:layout_column="0"
+                android:layout_columnSpan="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:gravity="top|center_horizontal"
+                android:text="1500 &amp; 5000"
+                android:textSize="15dp"
+                android:padding="5dp"
+                android:textColor="#000000"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_row="2"
+                android:layout_rowSpan="1"
+                android:layout_column="0"
+                android:layout_columnSpan="1"
+                android:layout_gravity="fill_horizontal"
+                android:gravity="bottom|center_horizontal"
+                android:text="1500"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:padding="5dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_row="0"
+                android:layout_rowSpan="1"
+                android:layout_column="1"
+                android:layout_columnSpan="1"
+                android:layout_gravity="fill_horizontal"
+                android:gravity="bottom|center_horizontal"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:text=">=5000"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:padding="5dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_rowSpan="1"
+                android:layout_column="1"
+                android:layout_columnSpan="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:gravity="top|center_horizontal"
+                android:text="abcd"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:padding="5dp"
+                android:textStyle="bold"/>
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_row="2"
+                android:layout_rowSpan="1"
+                android:layout_column="1"
+                android:layout_columnSpan="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:gravity="top|center_horizontal"
+                android:text="abcd"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:padding="5dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_row="0"
+                android:layout_rowSpan="1"
+                android:layout_column="2"
+                android:layout_columnSpan="1"
+                android:layout_gravity="fill_horizontal"
+                android:gravity="bottom|center_horizontal"
+                android:layout_columnWeight="1"
+                android:layout_width="0dp"
+                android:text="2252"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:padding="5dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_row="1"
+                android:layout_rowSpan="1"
+                android:layout_column="2"
+                android:layout_columnSpan="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:gravity="top|center_horizontal"
+                android:text="abcdefgh"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:padding="5dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_row="2"
+                android:layout_rowSpan="1"
+                android:layout_column="2"
+                android:layout_columnSpan="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:gravity="top|center_horizontal"
+                android:text="abcdefgh"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:padding="5dp"
+                android:textStyle="bold"/>-->
+        </GridLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="#9c564c">
+
+            <TextView
+                android:id="@+id/wageNumDenominator"
+                style="@style/TextViewNormalBold"
+                android:layout_weight="0.4"/>
+
+            <TextView
+                android:id="@+id/wageBonusExpiry"
+                style="@style/TextViewNormalBold"
+                android:layout_weight="0.6"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+</layout>
